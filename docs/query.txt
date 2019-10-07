@@ -1,0 +1,6 @@
+SELECT * FROM `users`
+
+$sql = "ALTER TABLE `users` CHANGE `password` `password` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL";
+
+$sql = "INSERT INTO `users` (`id`, `email`, `password`) VALUES (NULL, \'killerproteam123@gmail.com\', MD5(\'Killerproteam123!\'))";
+

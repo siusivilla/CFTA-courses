@@ -730,7 +730,7 @@
   content: "\e050";
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .title-font {
   font-family: 'Vollkorn SC', serif;
   font-weight: 700;
 }
@@ -850,7 +850,7 @@ Introduzione
 
 #home #introduzione .rilievo {
   font-size: 1.6rem;
-  text-shadow: 0 0 10px black;
+  font-weight: 400;
 }
 
 #home #categorie {
@@ -919,16 +919,22 @@ Introduzione
   margin: 0 auto;
 }
 
+#home #review i.card-img-top {
+  font-size: 5rem;
+  margin: 1rem auto;
+}
+
 #home #review .card-body {
   padding: 0.9rem;
 }
 
 #home #review .card-text {
   font-size: 1rem;
+  font-style: italic;
 }
 
 #home #review blockquote {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 #home #review .blockquote-footer {
@@ -1017,7 +1023,7 @@ Introduzione
 }
 
 #about .about-step {
-  margin: 4rem auto;
+  margin: 6rem auto;
 }
 
 #about .separatore {
@@ -1077,7 +1083,7 @@ footer .logo-footer {
 /*
 PAGINA DI REGISTRAZIONE
 */
-#singin, #singup, #forgot {
+#signin, #signup, #forgot {
   padding: 3rem auto !important;
 }
 
@@ -1117,5 +1123,5 @@ PAGINA DI REGISTRAZIONE
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
   margin-bottom: 15px;
+  max-width: 450px;
 }
-/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,326 @@
+@import "./variables";
+@import "./fonts";
+//@import "./sidebar";
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .title-font {
+  font-family: 'Vollkorn SC', serif;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  &:hover{
+	  text-decoration: underline;
+	  color: $linkSecondary;
+  }
+}
+
+//navigazione
+/*.navbar-dark {
+  .navbar-brand {
+    color: black;
+  }
+  .navbar-nav {
+    .nav-link {
+      color: white;
+
+      &.disabled {
+        color: white;
+      }
+    }
+  }
+}*/
+.navbar-brand img{
+  height: 32px;
+  fill: #fff;
+}
+#primarynav a.nav-link:hover{ color: white;}
+
+i.logo{
+  position: relative;
+    top: 16px;
+    left: 45px;
+    font-size: 60px;
+}
+form {
+	a {
+		color: $linkSecondary;
+		&:hover{
+			color: $linkSecondary;
+			text-decoration: underline;
+		}
+	}
+}
+.icon{
+  display: inline-block;}
+/*
+  Stile pagina
+*/
+.bg_primary, .bg-dark {
+  background-color: $primary;
+  color: white !important;
+}
+//poi eliminare
+.placeholder-ico{
+  font-size: 5em;
+  margin: 0.2em auto;
+}
+
+main{
+	padding-top: 3.5rem;
+}
+
+section {
+  padding: 2% 0;
+}
+
+/*
+  Navigazione
+*/
+.dropdown-item {
+  padding: .25rem 1rem;
+}
+
+/*
+HOME PAGE STYLE
+*/
+#home {
+  padding-top: 3.5rem;
+  
+  h2{
+		font-size: 2.2em;
+		margin-bottom: 2rem;
+	}
+  section {
+    padding: 6rem 0;
+  }
+	
+/*
+Introduzione
+*/
+  #introduzione {
+    padding: 2rem 0 2rem;
+    min-height: 70vh;
+	  .rilievo{
+      font-size: 1.6rem;
+      font-weight: 400;
+		  //text-shadow: 0 0 10px black;
+	  }
+  }
+  /*    
+  Categorie
+  */
+  #categorie{
+    text-align: center;
+    padding: 2% 0;
+    border-bottom: 1px solid $gray-400;
+
+    i{
+      font-size: 2em;
+      padding-bottom: 1rem;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      &:hover i{
+        text-shadow: 0 0 20px white;
+        color: $primary;
+      }
+    }
+  }
+
+  /*
+    Come funziona
+  */
+  #come-funziona{
+    text-align: center;
+    background-color: $gray-100;
+    border-bottom: 1px solid $gray-200;
+
+    i { 
+      font-size: 4rem;
+      margin: 2rem auto;
+    }
+    .subtitle{
+      padding: 0.5rem 1.2rem;
+    }
+  }
+  .badge-step{
+    display: block;
+    border-radius: 50%;
+    font-size: 1em;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+    margin: 0rem auto 1rem;
+  }
+  /*
+    Review
+  */
+  #review {
+    border-bottom: 1px solid $gray-400;
+  .ico{font-size: 3rem;}
+  .placeholder{width: 40%; max-width: 90px; margin: 0 auto;}
+  //card
+  i.card-img-top{
+    font-size: 5rem;
+  margin: 1rem auto;}
+  .card-body{padding: 0.9rem;}
+  .card-text{font-size: 1rem;
+  font-style: italic;}
+
+  //blockquote
+  blockquote{font-size: 0.8rem;}
+  .blockquote-footer {font-size: 90%;}
+
+  .point {
+    color: $secondary;
+    .point-negative{
+      opacity: 0.3;
+    }
+    .point-positive{
+      opacity: 1;
+    }
+    .fas{font-size: 1rem; padding-right: 4px; color:$secondary;}
+    img{height: 1rem; fill: red;}
+  }
+  
+  
+  }
+}
+/* 
+  Personalizzazione di Swiper
+*/
+.swiper-container {
+  width: 100%;
+  padding: 30px;
+}
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  // -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination, .swiper-container-horizontal > .swiper-pagination-bullets{bottom: 0;}
+.swiper-pagination-bullet{width: $bulletDimention;height: $bulletDimention; background-color: $secondary}
+.swiper-button-next, .swiper-button-prev {
+  &:after{
+      font-size: 2rem;
+    }
+}
+.swiper-button-prev{left: 0; color: $secondary}
+.swiper-button-next{right: 0; color: $secondary}
+
+
+.titolo_sezione {
+  //border-radius: 0rem;
+  //min-height: 0vh;
+  //margin: 0 33rem;
+  padding: 1rem;
+  //padding-bottom: 2px;
+  h1 {
+    line-height: 4rem;
+    border-radius: 50%;
+    background-color: $primary;
+    margin: 1rem 2rem;
+  }
+}
+
+#about{
+	.about-step{
+		margin: 6rem auto;
+	}
+	.separatore{border-color: $primary; }
+}
+
+#contatti{
+	letter-spacing: 2px;
+  padding: $paddingSession;
+  padding-bottom: 0;
+	a{
+		  color: #fff;
+		  text-decoration: none;
+	}
+	.maps iframe{
+     width: 100%;
+     height: 100%;
+   }
+}
+#author a{
+  color: #fff;
+  text-decoration: none;   
+}
+
+/*
+  Footer
+*/
+footer{
+  color: white;
+  a{
+    color: $gray-200;
+    &:hover {
+      color:inherit;
+      text-decoration: underline;
+    }
+  }
+  .widget{
+    padding-top: 7%;
+    padding-bottom: 3%;
+  }
+  .logo-footer{
+    height: 28px;
+  }
+}
+#copy{
+  font-size: 0.9em;
+}
+
+/*
+PAGINA DI REGISTRAZIONE
+*/
+#signin, #signup, #forgot {
+  padding: 3rem auto !important; 
+}
+
+// DOCUMENTAZIONE
+#docs{
+  padding: $paddingMain;
+  main{
+    padding-top: 0;
+  }
+}
+.sidebar{
+  padding: 0;
+  position: sticky;
+
+  .navbar-toggler {
+    color: $primary;//rgba(0,0,0,.5);
+    border: none;
+  }
+  
+  .sidebar-heading {
+    text-transform: uppercase;
+  }
+}
+
+#deck{
+  font-size: 14px;
+  .card-deck {
+    margin-bottom: 3rem;
+
+    .card {
+    flex: 0 0 30%;
+    margin-bottom: 15px;
+    max-width: 450px;
+    }
+
+  }
+}

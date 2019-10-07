@@ -1,0 +1,45 @@
+@import "./variables";
+
+#worldMap{fill:$primary;}
+
+.segnaposto{
+  fill:$linkSecondary;
+  
+  &:hover {
+    fill: $blue;
+    }
+  &:focus {
+    fill: $cyan;
+    }
+}
+
+.interno-segnaposto{
+  fill:$white;
+}
+
+@mixin segnaposto_animation($durata) {
+  animation-name: animateMap;
+  animation-iteration-count: 1;
+  animation-duration: $durata;  
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+#australiano, #europeo, #nordamericano {
+opacity: 0;
+}
+#australiano{
+  @include segnaposto_animation(1s);
+}
+#europeo{
+  @include segnaposto_animation(2s);
+}
+#nordamericano{
+  @include segnaposto_animation(3s);
+}
+
+@keyframes animateMap {
+  to{
+    opacity: 1;
+  }
+}
