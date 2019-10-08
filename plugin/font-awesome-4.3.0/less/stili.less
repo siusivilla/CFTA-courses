@@ -1,0 +1,268 @@
+/*
+Theme Name: WP Design
+Theme URI: http://www.sitodemotema.com
+Author: Mohole Lab
+Author URI: http://www.mohole.it
+Description: Il tema realizzato nel corso di WordPress Design
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: red, white, columns, bootstrap, jquery, responsive
+*/
+
+/* Generali/Tipografia */
+@import "../less_file/variables.less";
+@import "../less_file/mixins.less";
+
+@import "../less_file/alerts.less";
+@import "../less_file/badges.less";
+@import "../less_file/buttons.less";
+@import "../less_file/code.less";
+@import "../less_file/forms.less";
+@import "../less_file/glyphicons.less";
+@import "../less_file/grid.less";
+@import "../less_file/navbar.less";
+@import "../less_file/scaffolding.less";
+@import "../less_file/type.less";
+@import "../less_file/utilities.less";
+@import "../less_file/dropdowns.less";
+@import "../less_file/navs.less";
+
+@color: white;
+@rosso:#FE0F00;
+@bianco:#EDF6FF;
+@nero: #333;
+@nero2:#1C1C1C;
+
+.bck{
+background-color: @color;
+}
+body{
+	font-size: 19px;
+	line-height: 20px;
+//	font-family: Helvetica,Arial,sans;
+	font-weight: 300;
+}
+h1{
+	font-weight: 700;
+}
+a,a:hover{
+	color: @nero;
+}
+
+/* Layout */
+.fascetta{
+	background-color: @rosso;
+	height: 10px;
+}
+#intestazione{
+	line-height: 70px;
+	padding-bottom: 30px;
+}
+#nav{
+    li{
+	float: left;
+	margin-right: 45px;
+	font-size: 21px;
+       
+        &:last-child{
+	margin-right: 0;
+                } 
+        a{
+	color: #999;
+	transition: all 0.4s ease;
+	padding-bottom: 2px;
+	border-bottom: 2px solid white;
+            &:hover
+            {
+            color: @nero;
+            
+	text-decoration: none;
+	border-bottom: 2px solid @nero;
+            }
+        }
+     }
+}
+
+
+
+.azzurro{
+	background-color: @bianco;
+}
+#corpo{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.articolo{
+	padding: 5px 20px; 
+	.bck;
+	margin-bottom: 20px;
+}
+#barra .interno{
+	padding: 5px 20px; 
+	.bck;
+}
+.nero{
+	background-color: @nero2;
+	color: white;
+}
+#footer{
+	padding-top: 30px;
+	padding-bottom: 70px;
+p{
+	font-size: 16px;
+	line-height: 21px;
+	color: #eee;
+}
+}
+
+/* STILI AGGIUNTI NELLA REALIZZAZIONE DEL TEMA */
+
+/* nascondo il testo "in evidenza" negli articoli normali */
+.articolo .evidenza{
+	display: none;
+}
+
+/* stilo gli articolo "fissi" (sticky) */
+.articolo.sticky{
+	border: 1px solid @rosso;
+}
+
+/* mostro l'etichetta "in evidenza" per gli articoli sticky */
+.articolo.sticky .evidenza{
+	display: block;
+	width: 100px;
+	margin-top: -15px;
+	margin-bottom: 7px;
+	background-color: @rosso;
+	padding: 1px 0;
+	text-align: center;
+	color: white;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+/* voce attuale della navigazione */
+#nav li.current_page_item a{
+	color: @nero;
+	text-decoration: none;
+	border-bottom: 2px solid @nero;
+}
+
+/* Immagini in evidenza (solo articoli) */
+.post .wp-post-image{
+    float: left;
+    margin: 15px;
+    margin-left: 0;
+    border: 1px solid #777;
+    border-radius: 7px;
+}
+
+/* COMMENTI */
+/* ogni commento */
+li.comment{
+	list-style: none;
+	margin: 15px 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+	.bck;
+	transition: all 0.4s ease;
+&:hover{
+	box-shadow: 0px 0px 25px #ccc;
+}
+}
+/* data e link per rispondere */
+li.comment .comment-meta,
+li.comment .reply{
+	font-size: 14px;
+}
+/* solo i commenti pari */
+li.comment.odd{
+	background-color: #eee;
+}
+/* commenti di secondo e terzo livello (risposte a commenti) */
+li.comment.depth-2,
+li.comment.depth-3{
+	box-shadow: inset 0px 0px 15px #ccc;
+}
+/* etichette, input e texatarea di risposta */
+#respond input,
+#respond label,
+#respond textarea{
+	display: block;
+}
+#respond input,
+#respond textarea{
+	width: 100%;
+	box-sizing: border-box;
+	outline: none;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+/* in fase di interazione dell'utente */
+#respond input:focus,
+#respond textarea:focus{
+	border-color: @rosso;
+}
+/* nascondo i tags utilizzabili (spesso vanno fuori dalla pagina) */
+#respond .form-allowed-tags{
+	display: none;
+}
+/* pulsante di invio */
+#submit{
+	background-color: #eee;
+	border: 1px solid #ccc;
+	color: #444;
+	transition: all 1s ease;
+    &:hover{
+	color: white;
+	border-color: @rosso;
+	background-color: @rosso;
+}
+    }
+
+ button{
+    margin: 20px;
+    font-size: 120%;
+    }
+    .container {
+    border-radius: 35px;
+    border: 1px solid #000000;
+    padding: 40px;
+    color: #FFF;
+    background-color: rgba(181,181,181,0.4);
+    margin-top: 10px;
+    height: 330px;
+}
+/* COMMENTI */
+
+/* MENU A TENDINA */
+/* aspetto tendina */
+//#nav .sub-menu{
+//    position: absolute; /* sopra gli altri elementi */
+//    background-color: white;
+//    border: 1px solid #FE0F00;
+//    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+//    z-index: 99; /* sempre in primo piano */
+//    padding: 0;
+//    display: none;
+//}
+///* voci dentro la tendina */
+//#nav .sub-menu li{
+//    list-style:none;
+//    margin: 0;
+//    float: none;
+//    line-height: 50px;
+//}
+//#nav .sub-menu li a{
+//    display: block;
+//    padding: 0 10px;
+//    border-bottom: none;
+//}
+///* voci dentro la tendina al passaggio del mouse  */
+//#nav .sub-menu li a:hover{
+//    border-bottom: none;
+//    color: white;
+//    background-color:#FE0F00;
+//}
+///* MENU A TENDINA */

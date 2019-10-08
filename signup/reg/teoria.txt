@@ -1,0 +1,12 @@
+
+
+https://www.php.net/manual/en/function.trim.php
+
+https://www.php.net/manual/en/function.md5.php
+
+https://www.php.net/manual/en/pdo.setattribute.php
+
+PDO::ATTR_ERRMODE: Error reporting.
+    PDO::ERRMODE_SILENT: Just set error codes.
+    PDO::ERRMODE_WARNING: Raise E_WARNING.
+    PDO::ERRMODE_EXCEPTION: Throw exceptions.
