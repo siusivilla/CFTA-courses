@@ -24,13 +24,13 @@
               Modalita
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<?php echo BASE_URL?>mod/suicidi.php"><i class="fas fa-fill-drip mr-1"></i>&nbsp;Suicidi</a>
+              <a class="dropdown-item" href="<?php echo BASE_URL?>modalita.php?t=suicidio"><i class="fas fa-fill-drip mr-1"></i>&nbsp;Suicidi</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?php echo BASE_URL?>mod/naturali.php"><i class="fas fa-skull-crossbones mr-1"></i>&nbsp;Naturali</a>
+              <a class="dropdown-item" href="<?php echo BASE_URL?>modalita.php?t=naturale"><i class="fas fa-skull-crossbones mr-1"></i>&nbsp;Naturali</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?php echo BASE_URL?>mod/vip.php"><i class="fas fa-bomb mr-1"></i>&nbsp;VIP</a>
+              <a class="dropdown-item" href="<?php echo BASE_URL?>modalita.php?t=vip"><i class="fas fa-bomb mr-1"></i>&nbsp;VIP</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?php echo BASE_URL?>mod/incidenti.php"><i class="fas fa-car-crash mr-1"></i>&nbsp;Incidenti</a>
+              <a class="dropdown-item" href="<?php echo BASE_URL?>modalita.php?t=incidente"><i class="fas fa-car-crash mr-1"></i>&nbsp;Incidenti</a>
             </div>
           </li>
           <li class="nav-item">

@@ -19,7 +19,15 @@ else {
 }
   //seleziono eventi nel database
 $result = $conn->query($sql);
-
+?>
+<div class="jumbotron jumbotron-fluid page-title pt-dark">
+  <div class="container">
+    <h1 class="text-center">I nostri specialisti</h1>
+    <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+  </div>
+</div>
+<?php 
+   
 if ($result->num_rows>0) {
   //finchè ci sono eventi
   ?>

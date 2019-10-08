@@ -19,41 +19,46 @@ else {
 }
   //seleziono eventi nel database
 $result = $conn->query($sql);
-
+?>
+<div class="jumbotron jumbotron-fluid page-title pt-dark">
+  <div class="container">
+    <h1 class="text-center">I nostri specialisti</h1>
+    <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+  </div>
+</div>
+<?php 
 if ($result->num_rows>0) {
   //finchè ci sono eventi
   ?>
-
-<div class="container" id="deck">
+  <div class="container" id="deck"> 
     <!-- Schede killer -->
   <div class="card-deck justify-content-around mt-5">
-  <?php
-  while ($row=$result->fetch_assoc()){
-    $killer=$row['id'];
-?>
-<!-- Scheda -->
-<div class="card" data-aos="flip-left">
-  <img src="<?php echo $row['immagine'];?>" class="card-img-top" alt="<?php echo $row['nome'];?>">
-  <div class="card-body">
-      <h5 class="card-title"><?php echo $row['nome'];?></h5>
-      <p class="card-text"><?php echo $row['descrizione'];?></p>
-        </div>
-    </div>
-    <!-- fine scheda -->
     <?php
+    while ($row=$result->fetch_assoc()){
+    $killer=$row['id'];
+      ?>
+      <!-- Scheda -->
+      <div class="card" data-aos="flip-left">
+        <img src="<?php echo $row['immagine'];?>" class="card-img-top" alt="<?php echo $row['nome'];?>">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $row['nome'];?></h5>
+          <p class="card-text"><?php echo $row['descrizione'];?></p>
+        </div>
+      </div>
+      <!-- fine scheda -->
+      <?php
     }
     ?>
-
   </div>
-</div>
-<!-- fine schede killer -->
-    <?php
-  }
-  else {
-    echo ("Non ci sono killer disponibili.");
-  }
-  $conn->close();
-  ?>
+  </div>
+  <!-- fine schede killer -->
+  <?php
+}
+else {
+  echo ("Non ci sono killer disponibili.");
+}
+$conn->close();
+?>
 </main>
 <!-- end main -->
 

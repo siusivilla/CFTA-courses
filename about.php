@@ -7,14 +7,12 @@
  
 <!-- MAIN -->
 <main role="main" id="about">
-    <div class="container titolo_sezione">
-      <div class="row">
-        <div class="col-12 col-md-6 offset-md-3">
-          <h1 class="text-center text-white">Su di noi</h1>
-        </div>
-      </div>
-    </div>
-    
+<div class="jumbotron jumbotron-fluid page-title pt-dark">
+  <div class="container">
+    <h1 class="text-center">Su di noi</h1>
+    <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+  </div>
+</div>
     <div class="container" id="about-step">
       <div class="row about-step">
         <div class="col-md-8 px-5" data-aos="zoom-in">

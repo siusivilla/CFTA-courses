@@ -7,13 +7,11 @@
 
 <!-- MAIN -->
 <main role="main" id="contact">
-<div class="container">
-	<div class="row">
-		<div class="text-center mx-auto mt-5">
-		<h2>Copertura Mondiale</h2>
-			  <p>La nostra presenza è globale!</p>
-		</div>
-	</div>
+<div class="jumbotron jumbotron-fluid page-title pt-dark">
+  <div class="container text-center">
+    <h1 class="text-center">Copertura Mondiale</h1>
+    <p class="lead">La nostra presenza è globale!</p>
+  </div>
 </div>
 <div class="container-fluid">
 	<div class="text-center mx-auto w-100 mb-5" id="worldkiller" data-aos="zoom-in">
@@ -372,24 +370,24 @@
 					C412.8,37.7,411.5,36.9,409.8,36L409.8,36z M386.8,25.2c-5.7-1.3-5.9-1.7-1.7-3.9c6.1-3.2,11.9-4,14.6-2c2.1,1.5,2,1.8-2.1,4.2
 					C393.2,25.9,391.5,26.2,386.8,25.2z"/>
 			</g>
-			<g id="europeo" class="localita">
-				<a xlink:href="./loc/europa.php">
+			<g id="europa" class="localita">
+				<a xlink:href="./localita.php?t=europa">
 				<path id="EU-segnaposto" class="segnaposto" d="M722.3,101.1c-10.9,0-19.8,8.8-19.8,19.8c0,11.8,12.5,28,17.6,34.2c1.1,1.4,3.2,1.4,4.3,0
 					c5.1-6.2,17.6-22.4,17.6-34.2C742.1,109.9,733.3,101.1,722.3,101.1z M722.3,129.7c-4.9,0-8.8-3.9-8.8-8.8c0-4.9,3.9-8.8,8.8-8.8
 					c4.9,0,8.8,3.9,8.8,8.8C731.1,125.7,727.2,129.7,722.3,129.7z"/>
 				<circle id="EU-interno-segnaposto" class="interno-segnaposto" cx="722.3" cy="120.9" r="8.8"/>
 					</a>
 			</g>
-			<g id="nordamericano">
-				<a xlink:href="./loc/nord_america.php">
+			<g id="nordamerica">
+				<a xlink:href="./localita.php?t=america_nord">
 				<path id="NA-segnaposto" class="segnaposto" d="M196.6,158.6c-10.9,0-19.8,8.8-19.8,19.8c0,11.8,12.5,28,17.6,34.2c1.1,1.4,3.2,1.4,4.3,0
 					c5.1-6.2,17.6-22.4,17.6-34.2C216.4,167.5,207.5,158.6,196.6,158.6z M196.6,187.2c-4.9,0-8.8-3.9-8.8-8.8s3.9-8.8,8.8-8.8
 					s8.8,3.9,8.8,8.8S201.4,187.2,196.6,187.2z"/>
 				<circle id="NA-interno-segnaposto" class="interno-segnaposto" cx="196.6" cy="178.4" r="8.8"/>
 				</a>
 			</g>
-			<g id="australiano">
-				<a xlink:href="./loc/australia.php">
+			<g id="oceania">
+				<a xlink:href="./localita.php?t=oceania">
 				<path id="AU-segnaposto" class="segnaposto" d="M1314.5,520.5c-10.9,0-19.8,8.8-19.8,19.8c0,11.8,12.5,28,17.6,34.2c1.1,1.4,3.2,1.4,4.3,0
 					c5.1-6.2,17.6-22.4,17.6-34.2C1334.3,529.4,1325.4,520.5,1314.5,520.5z M1314.5,549.1c-4.9,0-8.8-3.9-8.8-8.8s3.9-8.8,8.8-8.8
 					s8.8,3.9,8.8,8.8S1319.4,549.1,1314.5,549.1z"/>
