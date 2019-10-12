@@ -10,7 +10,7 @@
     <div class="container pt-5 pb-5">
         <!-- Content -->
         <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-          <form class="js-validate" novalidate="novalidate" id="signupForm" method="post" action="login.php">
+          <form class="js-validate" novalidate="novalidate" id="signupForm" method="post" action="register.php">
             <form class="js-validate" novalidate="novalidate">
                       <!-- Signup -->
             <div id="signup"  data-target-group="idForm">

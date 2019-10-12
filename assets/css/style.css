@@ -744,20 +744,6 @@ a:hover {
   color: #e00001;
 }
 
-/*.navbar-dark {
-  .navbar-brand {
-    color: black;
-  }
-  .navbar-nav {
-    .nav-link {
-      color: white;
-
-      &.disabled {
-        color: white;
-      }
-    }
-  }
-}*/
 .navbar-brand img {
   height: 32px;
   fill: #fff;
@@ -802,10 +788,83 @@ form a:hover {
 
 main {
   padding-top: 3.5rem;
+  min-height: 75vh;
 }
 
 section {
   padding: 2% 0;
+}
+
+.page-title {
+  /* The image used */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 58, 64, 0.78)), to(rgba(51, 52, 54, 0.29))), url("../img/firearm.jpg");
+  background-image: linear-gradient(to bottom, rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29)), url("../img/firearm.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #ced4da;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  height: 30vh;
+  min-height: 7rem;
+  color: #fff;
+}
+
+.page-title h1 {
+  font-family: 'Vollkorn SC', serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.pt-dark {
+  background-color: #495057;
+  color: #fff;
+}
+
+.titolo_sezione {
+  padding: 1rem;
+}
+
+.titolo_sezione h1 {
+  line-height: 4rem;
+  border-radius: 50%;
+  background-color: #343a40;
+  margin: 1rem 2rem;
+}
+
+#localita .page-title {
+  /* The image used */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 58, 64, 0.78)), to(rgba(51, 52, 54, 0.29))), url("../img/world-connection.jpg");
+  background-image: linear-gradient(to bottom, rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29)), url("../img/world-connection.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#coverage .page-title {
+  /* The image used */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 58, 64, 0.78)), to(rgba(51, 52, 54, 0.29))), url("../img/world-connection.jpg");
+  background-image: linear-gradient(to bottom, rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29)), url("../img/world-connection.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#modalita .page-title {
+  /* The image used */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 58, 64, 0.78)), to(rgba(51, 52, 54, 0.29))), url("../img/assassins-creed.jpg");
+  background-image: linear-gradient(to bottom, rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29)), url("../img/assassins-creed.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*
@@ -813,6 +872,15 @@ section {
 */
 .dropdown-item {
   padding: .25rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #e00001;
+  text-decoration: underline;
 }
 
 /*
@@ -1011,17 +1079,6 @@ Introduzione
   color: red;
 }
 
-.titolo_sezione {
-  padding: 1rem;
-}
-
-.titolo_sezione h1 {
-  line-height: 4rem;
-  border-radius: 50%;
-  background-color: #343a40;
-  margin: 1rem 2rem;
-}
-
 #about .about-step {
   margin: 6rem auto;
 }
@@ -1119,9 +1176,14 @@ PAGINA DI REGISTRAZIONE
 }
 
 #deck .card-deck .card {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
   margin-bottom: 15px;
   max-width: 450px;
+}
+
+@media (min-width: 576px) {
+  #deck .card-deck .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%;
+  }
 }

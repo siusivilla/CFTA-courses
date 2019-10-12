@@ -18,11 +18,11 @@
   fill: #fff;
 }
 
-#australiano, #europeo, #nordamericano {
+#oceania, #europa, #nordamerica {
   opacity: 0;
 }
 
-#australiano {
+#oceania {
   -webkit-animation-name: animateMap;
           animation-name: animateMap;
   -webkit-animation-iteration-count: 1;
@@ -35,7 +35,7 @@
           animation-delay: 1s;
 }
 
-#europeo {
+#europa {
   -webkit-animation-name: animateMap;
           animation-name: animateMap;
   -webkit-animation-iteration-count: 1;
@@ -48,7 +48,7 @@
           animation-delay: 1s;
 }
 
-#nordamericano {
+#nordamerica {
   -webkit-animation-name: animateMap;
           animation-name: animateMap;
   -webkit-animation-iteration-count: 1;

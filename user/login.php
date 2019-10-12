@@ -40,8 +40,4 @@ else{
     $err=1;
     $_SESSION['err']=$err;
 }
-
-/*
-
-*/
 ?>

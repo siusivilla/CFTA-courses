@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./fonts";
+@import "./mixin";
 //@import "./sidebar";
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .title-font {
@@ -16,24 +17,12 @@ a {
 }
 
 //navigazione
-/*.navbar-dark {
-  .navbar-brand {
-    color: black;
-  }
-  .navbar-nav {
-    .nav-link {
-      color: white;
 
-      &.disabled {
-        color: white;
-      }
-    }
-  }
-}*/
 .navbar-brand img{
   height: 32px;
   fill: #fff;
 }
+
 #primarynav a.nav-link:hover{ color: white;}
 
 i.logo{
@@ -42,6 +31,7 @@ i.logo{
     left: 45px;
     font-size: 60px;
 }
+
 form {
 	a {
 		color: $linkSecondary;
@@ -51,8 +41,11 @@ form {
 		}
 	}
 }
+
 .icon{
   display: inline-block;}
+
+
 /*
   Stile pagina
 */
@@ -60,6 +53,7 @@ form {
   background-color: $primary;
   color: white !important;
 }
+
 //poi eliminare
 .placeholder-ico{
   font-size: 5em;
@@ -67,11 +61,62 @@ form {
 }
 
 main{
-	padding-top: 3.5rem;
+  padding-top: 3.5rem;
+  min-height: 75vh;
 }
 
 section {
   padding: 2% 0;
+}
+
+
+.page-title {
+  @include parallax-bg-gradient("firearm.jpg",rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29));
+  border-bottom: 1px solid $gray-400;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  height: 30vh;
+  min-height: 7rem;
+
+  color: $white;
+  h1 {
+    font-family: 'Vollkorn SC', serif;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+}
+
+.pt-dark{
+  background-color: $gray-700;
+  color: #fff;
+}
+.titolo_sezione {
+  padding: 1rem;
+  
+  h1 {
+    line-height: 4rem;
+    border-radius: 50%;
+    background-color: $primary;
+    margin: 1rem 2rem;
+  }
+}
+#localita {
+  //min-height: 75vh;
+  .page-title {
+    @include parallax-bg-gradient("world-connection.jpg",rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29));
+  }
+}
+#coverage {
+  //min-height: 75vh;
+  .page-title {
+    @include parallax-bg-gradient("world-connection.jpg",rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29));
+  }
+}
+#modalita {
+  //min-height: 75vh;
+  .page-title {
+    @include parallax-bg-gradient("assassins-creed.jpg",rgba(52, 58, 64, 0.78), rgba(51, 52, 54, 0.29));
+  }
 }
 
 /*
@@ -80,7 +125,14 @@ section {
 .dropdown-item {
   padding: .25rem 1rem;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: $white;
 
+    &:hover{
+      color: $linkSecondary;
+      text-decoration: underline;
+    }
+}
 /*
 HOME PAGE STYLE
 */
@@ -193,6 +245,7 @@ Introduzione
   
   }
 }
+
 /* 
   Personalizzazione di Swiper
 */
@@ -219,21 +272,6 @@ Introduzione
 .swiper-button-prev{left: 0; color: $secondary}
 .swiper-button-next{right: 0; color: $secondary}
 
-
-.titolo_sezione {
-  //border-radius: 0rem;
-  //min-height: 0vh;
-  //margin: 0 33rem;
-  padding: 1rem;
-  //padding-bottom: 2px;
-  h1 {
-    line-height: 4rem;
-    border-radius: 50%;
-    background-color: $primary;
-    margin: 1rem 2rem;
-  }
-}
-
 #about{
 	.about-step{
 		margin: 6rem auto;
@@ -254,6 +292,7 @@ Introduzione
      height: 100%;
    }
 }
+
 #author a{
   color: #fff;
   text-decoration: none;   
@@ -279,6 +318,7 @@ footer{
     height: 28px;
   }
 }
+
 #copy{
   font-size: 0.9em;
 }
@@ -311,16 +351,23 @@ PAGINA DI REGISTRAZIONE
   }
 }
 
+// CARTE KILLER
 #deck{
   font-size: 14px;
+
   .card-deck {
     margin-bottom: 3rem;
 
     .card {
-    flex: 0 0 30%;
+    //flex: 0 0 30%;
     margin-bottom: 15px;
     max-width: 450px;
     }
 
+    @media  (min-width: 576px) {
+      .card {
+        flex: 1 0 30%;
+      }
+    }
   }
 }

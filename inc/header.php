@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/aos.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/swiper.min.css">
 	<!-- custom CSS -->
-  <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/style.min.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/style.css">
   <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/animation.min.css">
 
 <!--titolo della pagina-->

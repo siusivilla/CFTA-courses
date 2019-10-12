@@ -25,16 +25,16 @@
   animation-delay: 1s;
 }
 
-#australiano, #europeo, #nordamericano {
+#oceania, #europa, #nordamerica {
 opacity: 0;
 }
-#australiano{
+#oceania{
   @include segnaposto_animation(1s);
 }
-#europeo{
+#europa{
   @include segnaposto_animation(2s);
 }
-#nordamericano{
+#nordamerica{
   @include segnaposto_animation(3s);
 }
 

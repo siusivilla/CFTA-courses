@@ -20,8 +20,8 @@ else {
   //seleziono eventi nel database
 $result = $conn->query($sql);
 ?>
-<div class="jumbotron jumbotron-fluid page-title pt-dark">
-  <div class="container">
+<div class="jumbotron jumbotron-fluid page-title d-flex">
+  <div class="container text-center align-self-center">
     <h1 class="text-center">I nostri specialisti</h1>
     <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
   </div>

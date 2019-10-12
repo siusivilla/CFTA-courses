@@ -6,11 +6,11 @@
 ?>
 
 <!-- MAIN -->
-<main role="main" id="contact">
-<div class="jumbotron jumbotron-fluid page-title pt-dark">
-  <div class="container text-center">
+<main role="main" id="coverage">
+<div class="jumbotron jumbotron-fluid page-title d-flex">
+  <div class="container text-center align-self-center">
     <h1 class="text-center">Copertura Mondiale</h1>
-    <p class="lead">La nostra presenza è globale!</p>
+    <!-- <p class="lead">La nostra presenza è globale!</p> -->
   </div>
 </div>
 <div class="container-fluid">

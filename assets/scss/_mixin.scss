@@ -1,0 +1,21 @@
+@mixin parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin parallax-bg($image) {
+  /* The image used */
+  background-image: url("../img/"+$image);
+
+  @include parallax();
+}
+
+@mixin parallax-bg-gradient($image, $color-top, $color-bottom) {
+  /* The image used */
+  background-image: linear-gradient(to bottom, $color-top, $color-bottom), url("../img/"+$image);
+
+  @include parallax();
+}
