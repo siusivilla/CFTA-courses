@@ -47,7 +47,6 @@
             <li><a class="nav-link" href="<?php echo BASE_URL?>user/signin.php">Accedi</a></li>
           <?php } ?>
         </ul>
-
       </div>
     </div>
   </nav>

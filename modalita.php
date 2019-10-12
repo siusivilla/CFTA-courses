@@ -44,6 +44,15 @@ if ($result->num_rows>0) {
           <h5 class="card-title"><?php echo $row['nome'];?></h5>
           <p class="card-text"><?php echo $row['descrizione'];?></p>
         </div>
+        <div class="card-footer d-flex justify-content-around">
+        <?php
+        if (isLog()) {
+          echo '<a class="btn btn-danger btn-lg btn-block" href="killer.php?id='.$row['id'].'" role="button">Prenota</a>';
+        }else {
+          echo '<a class="btn btn-info btn-lg btn-block" href="user/signin.php" role="button">Registrati per prenotare</a>';
+        }
+        ?>
+        </div>
       </div>
       <!-- fine scheda -->
       <?php

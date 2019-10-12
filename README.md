@@ -1,2 +1,0 @@
-# cfta
-CFTA corsi

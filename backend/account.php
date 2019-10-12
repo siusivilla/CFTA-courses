@@ -6,91 +6,49 @@
 <body>
 
 <div class="wrapper">
-  <?php include_once("sidebar.php"); ?>
+<?php include_once("sidebar.php"); ?>
+<div class="main-panel">
+<?php include_once("navbar.php"); ?>
 
-  <div class="main-panel">
-	  <?php include_once("navbar.php"); ?>
-
-		<div class="content">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-8">
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title">Edit Profile</h4>
-							</div>
-						<div class="card-body">
-							<form>
-								<div class="row">
-								<div class="col-md-5 pl-1">
-											<div class="form-group">
-													<label for="exampleInputEmail1">Email address</label>
-													<input type="email" class="form-control" placeholder="Email">
-											</div>
-									</div>
-									<div class="col-md-4 pr-1">
-										<div class="form-group">
-											<label>Company (disabled)</label>
-											<input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-										</div>
-									</div>
-									<div class="col-md-3 px-1">
-											<div class="form-group">
-													<label>Username</label>
-													<input type="text" class="form-control" placeholder="Username" value="michael23">
-											</div>
-									</div>
-								</div>
-								
-								
-								<button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
-								<div class="clearfix"></div>
-							</form>
-						</div>
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-header">
+						<h2 class="card-title">Profilo</h2>
 					</div>
-				</div>
-
-					<!-- badge destro -->
-					<div class="col-md-4">
-						<div class="card card-user">
-							<div class="card-image">
-							<img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="...">
-							</div>
-							<div class="card-body">
-								<div class="author">
-									<a href="#">
-											<img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="...">
-											<h5 class="title">Nome Cognome</h5>
-									</a>
-									<p class="description">
-										<?php echo $_SESSION["email"] ?>
-									</p>
+					<div class="card-body">
+						<form action="function/update_user.php">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="email">Email</label>
+									<input type="email" class="form-control" id="email" placeholder="<?php echo $_SESSION['email']; ?>">
 								</div>
-								<!-- descrizione -->
-								<p class="description text-center">"Descrizione personalizzata"</p>
+								<div class="form-group col-md-6">
+									<label for="password">Password</label>
+									<input type="password" class="form-control" id="password" placeholder="<?php echo $_SESSION['password']; ?>">
+								</div>
 							</div>
-							<hr>
-							<!-- social -->
-							<div class="button-container mr-auto ml-auto">
-								<button href="#" class="btn btn-simple btn-link btn-icon">
-									<i class="fa fa-facebook-square"></i>
-								</button>
-								<button href="#" class="btn btn-simple btn-link btn-icon">
-									<i class="fa fa-twitter"></i>
-								</button>
-								<button href="#" class="btn btn-simple btn-link btn-icon">
-									<i class="fa fa-google-plus-square"></i>
-								</button>
+							<!-- Azioni -->
+							<div class="form-row justify-content-center mt-3">
+								<div class="form-group">
+									<button type="submit" class="btn btn-danger btn-fill ml-2" name="delete_button" value="Delete">Elimina</button>
+									<button type="submit" class="btn btn-primary btn-fill" name="update_button" value="Update">Aggiorna</button>
+								</div>
 							</div>
-						</div>
+							<div class="clearfix"></div>
+						</form>
 					</div>
-
 				</div>
 			</div>
-		</div>
 
-		<?php include_once("footer.php"); ?>
+		</div>
 	</div>
+</div>
+
+<?php include_once("footer.php"); ?>
+</div>
 </div>
 
 </body>

@@ -31,25 +31,25 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3 col-md-2 offset-md-2">
-          <a href="mod/suicidi.php">
+          <a href="<?php echo BASE_URL?>modalita.php?t=suicidio">
             <i class="fas fa-fill-drip"></i>
             <p>Suicidi</p>
           </a>
       </div>
       <div class="col-sm-3 col-md-2 ">
-        <a href="mod/naturali.php">
+        <a href="<?php echo BASE_URL?>modalita.php?t=naturale">
           <i class="fas fa-skull-crossbones"></i>
           <p>Naturale</p>
         </a>
       </div>
       <div class="col-sm-3 col-md-2 ">
-        <a href="mod/vip.php">
+        <a href="<?php echo BASE_URL?>modalita.php?t=vip">
           <i class="fas fa-bomb"></i>
           <p>VIP</p>
         </a>
       </div>
       <div class="col-sm-3 col-md-2 ">
-        <a href="mod/incidenti.php">
+        <a href="<?php echo BASE_URL?>modalita.php?t=incidente">
           <i class="fas fa-car-crash"></i>
           <p>Incidenti</p>
         </a>

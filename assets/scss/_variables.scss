@@ -38,3 +38,22 @@ $bulletDimention: 10px;
 $marginCard: 0.9rem;
 $paddingSession: 3rem 0;
 $paddingMain: 3.5rem 0;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    10: 10%,
+    25: 25%,
+    30: 30%,
+    50: 50%,
+    60: 60%,
+    75: 75%,
+    80: 80%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);

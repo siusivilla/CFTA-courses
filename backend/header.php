@@ -1,4 +1,4 @@
-<?php reservedArea(); ?>
+<?php isLog(); ?>
 <!DOCTYPE html>
 <html lang="it">
 

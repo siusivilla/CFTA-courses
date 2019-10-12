@@ -20,7 +20,26 @@
                 <p>Riempi tutti i campi per partire.</p>
               </header>
               <!-- End Title -->
-  
+              
+              <!-- Message area -->
+              
+              <?php
+              if (isset($_SESSION['err']) && $_SESSION['err']==1){
+                switch ($_GET['e']) {
+                  case 'esiste':
+                    $message = "Utente già registrato";
+                    break;
+                  
+                  default:
+                    # code...
+                    break;
+                }
+                echo '<div class="alert alert-danger" role="alert">';
+                echo $message;
+                echo "</div>";
+              }
+              ?>
+              <!-- Message end -->
               <!-- Email -->
               <div class="js-form-message mb-4">
                 <div class="js-focus-state input-group form">

@@ -1,17 +1,19 @@
 <?php
+//controllo se utente è loggato
 function isLog(){
-	if(isset($_SESSION['err']) AND $_SESSION["err"]==0) {
+	if(isset($_SESSION['email'])) {
 		return TRUE;
 	}else{
-		//rimando alla home
 		return FALSE;
 	}
 }
-function reservedArea(){
-	if(!isset($_SESSION['err']) OR $_SESSION["err"]==1) {
-		header('location:../user/signin.php');
-	} else{
-		$isLog = "registrato";
+
+//controllo che sia un amministratore
+function isAdmin(){
+	if(isLog() && $_SESSION["type"]==1) {
+		return TRUE;
+	}else{
+		return FALSE;
 	}
 }
 
@@ -22,6 +24,7 @@ function logOut(){
 	//rimando all'area riservata
 	header('location:/index.php');
 }
-// Print_r ($_SESSION);
+
+//Print_r ($_SESSION);
 
 ?>

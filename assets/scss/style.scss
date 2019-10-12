@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./fonts";
 @import "./mixin";
+@import "./sizing";
 //@import "./sidebar";
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .title-font {
@@ -351,6 +352,9 @@ PAGINA DI REGISTRAZIONE
   }
 }
 
+#killer{
+  margin-bottom: 3rem;
+}
 // CARTE KILLER
 #deck{
   font-size: 14px;
@@ -370,4 +374,7 @@ PAGINA DI REGISTRAZIONE
       }
     }
   }
+/*   .card-footer {
+    background-color: rgba(165, 32, 32, 0.13);
+  } */
 }

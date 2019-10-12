@@ -13,7 +13,9 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <h1 class="display-4">Benvenvenuto <?php echo $_SESSION["email"] ?>!</h1>
+          <div class="shadow m-3">
+            <h1 class="display-4">Benvenvenuto <br><?php echo $_SESSION["email"] ?>!</h1>
+          </div>
         </div>
       </div>
     </div>

@@ -12,7 +12,6 @@
 <ul class="nav navbar-nav mr-auto">
 <li class="nav-item">
     <a href="#" class="nav-link" data-toggle="dropdown">
-        <i class="nc-icon nc-palette"></i>
         <span class="d-lg-none">Dashboard</span>
     </a>
 </li>
@@ -45,19 +44,6 @@
     <a class="nav-link" href="account.php">
         <span class="no-icon">Account</span>
     </a>
-</li>
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="no-icon">Dropdown</span>
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-    </div>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="../user/logout.php">

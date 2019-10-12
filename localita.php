@@ -38,19 +38,28 @@ if ($result->num_rows>0) {
   <?php
   while ($row=$result->fetch_assoc()){
     $killer=$row['id'];
-?>
-<!-- Scheda -->
-<div class="card" data-aos="flip-left">
-  <img src="<?php echo $row['immagine'];?>" class="card-img-top" alt="<?php echo $row['nome'];?>">
-  <div class="card-body">
-      <h5 class="card-title"><?php echo $row['nome'];?></h5>
-      <p class="card-text"><?php echo $row['descrizione'];?></p>
-        </div>
+  ?>
+      <!-- Scheda -->
+    <div class="card" data-aos="flip-left">
+      <img src="<?php echo $row['immagine'];?>" class="card-img-top" alt="<?php echo $row['nome'];?>">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $row['nome'];?></h5>
+        <p class="card-text"><?php echo $row['descrizione'];?></p>
+      </div>
+      <div class="card-footer d-flex justify-content-around">
+        <?php
+        if (isLog()) {
+          echo '<a class="btn btn-danger btn-lg btn-block" href="killer.php?id='.$row['id'].'" role="button">Prenota</a>';
+        }else {
+          echo '<a class="btn btn-info btn-lg btn-block" href="user/signin.php" role="button">Registrati per prenotare</a>';
+        }
+        ?>
+      </div>
     </div>
     <!-- fine scheda -->
-    <?php
-    }
-    ?>
+  <?php
+  }
+  ?>
 
   </div>
 </div>
