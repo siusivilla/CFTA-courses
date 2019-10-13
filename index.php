@@ -246,7 +246,23 @@
   </div>
 </section>
 <!-- end recensioni -->
-
+<!-- Newsletter -->
+<section>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-12">
+      <h2>Interessato alle ultime novità su come risolvere i propri problemi in maniera pulita?</h2>
+      <p class="lead">Iscriviti alla newsletter KillerNew!</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+    MAILCHIMP NEWSLETTER
+    </div>
+  </div>
+</div>
+</section>
+<!-- end Newsletter -->
 </main>
 <!-- end main -->
 

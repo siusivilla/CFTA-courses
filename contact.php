@@ -53,6 +53,33 @@
       </div>
     </div>
   </form>
+  <!-- Message area -->
+  <?php
+  //c'è stato un errore
+  if (isset($_SESSION['err']) && $_SESSION['err']==1) {
+    switch ($_GET['e']) {
+      //non esiste utente
+      case 'errinvio':
+        $message = "Problemi nell'invio dell'email di contatto, riprovare più tardi";
+        break;
+      //errore generale nella rigenerazione della password
+      default:
+        $message = "Problema momentaneo, riprovare più tardi";
+        break;
+    }
+    echo '<div class="alert alert-danger text-center" role="alert">';
+    echo $message;
+    echo "</div>";
+  }
+  if (isset($_SESSION['email']) && $_SESSION['email']==1) {
+    echo '<div class="alert alert-success" role="alert">
+    email inviata, la ricontatteremo al più presto!
+    </div>';
+  }
+  unset ($_SESSION["email"]);
+  ?>
+  <!-- Message end -->
+
   <div class="text-white">
   <h2 class="text-uppercase mt-4 font-weight-bold titoli">dove siamo</h2>
 
