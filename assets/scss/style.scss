@@ -243,7 +243,14 @@ Introduzione
     img{height: 1rem; fill: red;}
   }
   
-  
+  /* 
+    Newsletter
+  */
+  #newsletter {
+    text-align: center;
+    background-color: $gray-100;
+  }
+
   }
 }
 
@@ -379,11 +386,4 @@ PAGINA DI REGISTRAZIONE
   } */
 }
 
-/* .toggler-password{
-  position: relative;
-  float: right;
-  margin-right: 20px;
-  margin-left: -20px;
-  margin-top: -24px;
-  z-index: 2;
-} */
+@import "./mailchimp";

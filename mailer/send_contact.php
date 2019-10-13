@@ -37,12 +37,11 @@ try {
   // Content
   $mail->isHTML(true);                                  // Set email format to HTML
   $mail->Subject = 'KillerPro - richiesta di contatto';
-  $mail->Body    = "Richiesta di contatto da: ".$mittente_nome." <br /><br />Oggetto: ".$mail_oggetto."<br />Messaggio: ".$mail_messaggio;
+  $mail->Body    = "Richiesta di contatto da KillerPro<br /><br />Nome: ".$mittente_nome."<br />Email: ".$mittente_email."<br /> Oggetto: ".$mail_oggetto."<br />Messaggio: ".$mail_messaggio;
 
   $mail->send();
 
   $mail_result=1;
-
   $_SESSION['email']=$mail_result;
   header('location:../contact.php?m=inviata');
 

@@ -16,7 +16,7 @@
 </div>
 <div class="col-md-6">
   <h2 class="text-uppercase mt-3 font-weight-bold text-white titoli">CONTATTACI</h2>
-  <form class="js-validate" novalidate="novalidate" id="contactForm" method="post" action="send_email.php" method="post">
+  <form class="js-validate" novalidate="novalidate" id="contactForm" method="post" action="mailer/send_contact.php" method="post">
     <div class="row">
       <div class="col-12">
         <div class="form-group">
@@ -60,26 +60,26 @@
     switch ($_GET['e']) {
       //non esiste utente
       case 'errinvio':
-        $message = "Problemi nell'invio dell'email di contatto, riprovare più tardi";
+        $message = "Problemi nell'invio dell'email di contatto, <br/>riprovare più tardi";
         break;
       //errore generale nella rigenerazione della password
       default:
         $message = "Problema momentaneo, riprovare più tardi";
         break;
     }
-    echo '<div class="alert alert-danger text-center" role="alert">';
+    echo '<div class="alert alert-danger text-center mt-3" role="alert">';
     echo $message;
     echo "</div>";
   }
+  //email correttamente inviata
   if (isset($_SESSION['email']) && $_SESSION['email']==1) {
-    echo '<div class="alert alert-success" role="alert">
+    echo '<div class="alert alert-success text-center mt-3" role="alert">
     email inviata, la ricontatteremo al più presto!
     </div>';
   }
   unset ($_SESSION["email"]);
   ?>
   <!-- Message end -->
-
   <div class="text-white">
   <h2 class="text-uppercase mt-4 font-weight-bold titoli">dove siamo</h2>
 

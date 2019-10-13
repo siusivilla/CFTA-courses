@@ -62,7 +62,6 @@ $row=$result->fetch_assoc()
           <input type="hidden" class="form-control" name="prezzo" id="prezzo" value="<?php echo $row['prezzo'];?>">
           <button type="submit" class="btn btn-success btn-block">Prenota</button>
         </form>
-        <div id="paypal-button-container"></div>
         <p class="text-muted text-sm text-center mt-2">Per urgenze contattateci.</p>
         <hr class="my-4">
         <div class="text-center">
