@@ -29,9 +29,9 @@
     errorPlacement: function ( error, element ) {
         // Add the `invalid-feedback` class to the error element
         error.addClass( "invalid-feedback" );
-
-        if ( element.prop( "type" ) === "checkbox" ) {
-            error.insertAfter( element.next( "label" ) );
+        
+        if ( element.prop( "id" ) === "password" ) {
+            error.insertAfter(".input-group-append");
         } else {
             error.insertAfter( element );
         }
@@ -120,6 +120,11 @@
 
         if ( element.prop( "type" ) === "checkbox" ) {
             error.insertAfter( element.next( "label" ) );
+        } else {
+            error.insertAfter( element );
+        }
+        if ( element.prop( "id" ) === "password" ) {
+            error.insertAfter(".input-group-append");
         } else {
             error.insertAfter( element );
         }

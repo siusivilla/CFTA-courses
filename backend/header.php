@@ -11,10 +11,13 @@
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/7434385de6.js" crossorigin="anonymous"></script>
     <!-- CSS Files -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <!-- <link href="assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" /> -->
     <link rel="stylesheet" href="assets/css/KP-dashboard.css">
+<style> 
 
+ </style>
     <title><?php echo $pageTitle; ?></title>
 </head>

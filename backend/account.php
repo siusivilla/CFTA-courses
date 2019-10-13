@@ -29,6 +29,7 @@
 									<label for="password">Password</label>
 									<input type="password" class="form-control" id="password" placeholder="<?php echo $_SESSION['password']; ?>">
 								</div>
+								
 							</div>
 							<!-- Azioni -->
 							<div class="form-row justify-content-center mt-3">

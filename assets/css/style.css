@@ -1290,3 +1290,12 @@ PAGINA DI REGISTRAZIONE
             flex: 1 0 30%;
   }
 }
+
+/* .toggler-password{
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  margin-left: -20px;
+  margin-top: -24px;
+  z-index: 2;
+} */

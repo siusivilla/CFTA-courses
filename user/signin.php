@@ -40,6 +40,11 @@
                     </span>
                   </div>
                   <input type="password" class="form-control form__input" name="password" id="password" required="" placeholder="Password" aria-label="Password" data-msg="Your password is invalid. Please try again." data-error-class="u-has-error" data-success-class="u-has-success">
+                  <div class="input-group-append form__append">
+                    <span class="input-group-text form__text" title="Clicca qui per mostrare/nascondere password">
+                      <span class="fa fa-eye form__text-inner toggle-password" toggle="#password"></span>
+                    </span>
+                  </div>
                 </div>
               </div>
               <!-- End Input -->
@@ -86,6 +91,7 @@
 <?php
   include_once('../inc/footer.php');
   include_once('../script/validate.php');
+  include_once('../script/form.php');
 ?>
 
 </body>

@@ -13,5 +13,15 @@
 <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
 <script>
-
+// toggle password visibility
+$('.toggle-password').on('click', function() {
+  $(this).toggleClass('fa-eye fa-eye-slash');
+  let input = $($(this).attr('toggle'));
+  if (input.attr('type') == 'password') {
+    input.attr('type', 'text');
+  }
+  else {
+    input.attr('type', 'password');
+  }
+});
 </script>

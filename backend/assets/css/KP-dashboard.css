@@ -4723,3 +4723,11 @@ License - nucleoapp.com/license/
 }
 
 /* all icon font classes list here */
+.toggler-password {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  margin-left: -20px;
+  margin-top: -24px;
+  z-index: 2;
+}

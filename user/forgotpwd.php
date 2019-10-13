@@ -9,7 +9,7 @@
     <div class="container pt-5 pb-5">
         <!-- Content -->
         <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-          <form class="js-validate" novalidate="novalidate" id="forgotForm" method="post" action="">    
+          <form class="js-validate" novalidate="novalidate" id="forgotForm" method="post" action="resetpwd.php">    
                       <!-- Forgot Password -->
             <div id="forgotPassword" data-target-group="idForm">
               <!-- Title -->
@@ -18,7 +18,43 @@
                 <p>Inserisci la tua email e riceverai le istruzioni per recuperare la tua password.</p>
               </header>
               <!-- End Title -->
-        
+              
+              <!-- Message area -->
+              <?php
+              //c'è stato un errore
+              if (isset($_SESSION['err'])){
+                if ($_SESSION['err']==1) {
+                  switch ($_GET['e']) {
+                    //non esiste utente
+                    case 'nonesiste':
+                      $message = "Utente non registrato!";
+                      break;
+                    case 'nomail':
+                      $message = "Problema di sistema temporaneo, riprovare più tardi";
+                      break;
+                    case 'errinvio':
+                      $message = "Problema nell'invio della password temporanea, riprovare più tardi";
+                      break;
+                    //errore generale nella rigenerazione della password
+                    default:
+                      $message = "Problemi con il recupero della password, riprovare più tardi";
+                      break;
+                  }
+                  echo '<div class="alert alert-danger text-center" role="alert">';
+                  echo $message;
+                  echo "</div>";
+                }
+                // messaggio inviato con successo
+                if ($_SESSION['err']==2) {
+                  echo '<div class="alert alert-success" role="alert">
+                  Password provvisoria inviata all\'email di registrazione, aggiornare al primo ingresso!
+                  </div>';
+                }
+              }
+              unset ($_SESSION["err"]);
+              ?>
+              <!-- Message end -->
+
               <!-- Input -->
               <div class="js-form-message mb-4">
                 <div class="js-focus-state input-group form">
