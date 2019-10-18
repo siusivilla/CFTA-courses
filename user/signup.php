@@ -79,7 +79,7 @@
                       <span class="fa fa-key form__text-inner"></span>
                     </span>
                   </div>
-                  <input type="password" class="form-control form__input" name="confirm_password" id="confirm_password" required="" placeholder="Confirm Password" aria-label="Confirm Password" data-msg="Password does not match the confirm password." data-error-class="u-has-error" data-success-class="u-has-success">
+                  <input type="password" class="form-control form__input" name="confirm_password" id="confirm_password" required="" placeholder="Conferma Password" aria-label="Confirm Password" data-msg="Password does not match the confirm password." data-error-class="u-has-error" data-success-class="u-has-success">
                 </div>
               </div>
               <!-- End confirm password -->

@@ -1,6 +1,10 @@
-<?php 
+<?php
 ob_start();
 session_start();
+/* 
+ * CREAZIONE ED INVIO TOKEN RECUPERO PASSWORD 
+ */
+
 //includo funzione random password
 include_once('../inc/function.php');
 
@@ -32,17 +36,26 @@ if(isset($_POST["email"])){
   if($num_row>0)
   {
     //creo password temporanea
-    $pwd_new = password_generate(10);
-    //cripto
-    $pwd_reset=md5($pwd_new);
+    $token = token_generate(10);
+    
+    //strtotime ( string $time [, int $now = time() ] ) : int
+    //strtotime — Parse about any English textual datetime description into a Unix timestamp
+    //now - The timestamp which is used as a base for the calculation of relative dates.
+    //creo la data di scadenza aggiungendo a now un ora
+    //$expFormat = strtotime('+1 hour');
+
+    $expFormat = mktime(date("H")+1, date("i"), date("s"), date("m") ,date("d"), date("Y"));
+    $expDate = date("Y-m-d H:i:s",$expFormat);
 
     //inserisco nel db aggiornando l'utente
-    //UPDATE users SET password = '7adfca2f2aba4cd301a02b9f33ca9f' WHERE `users`.`id` = 3
+    //INSERT INTO `password_reset_temp` (`id`, `email`, `key`, `expDate`) VALUES ('1', 'killerpro@test.it', '1234rtgbhG', '2019-10-17 17:00:00');
     try {
-      $sql="UPDATE users SET password = :password WHERE `users`.`id` = :id";
+      //$sql="INSERT INTO `password_reset_temp` (`email`, `key`, `expDate`) VALUES (':email', ':token', ':scadenza')";
+      $sql="INSERT INTO `password_reset_temp` (`email`, `token`, `expDate`) VALUES ('".$email_reset."', '".$token."', '".$expDate."')";
       $u=$pdo->prepare($sql);
-      $u->bindValue(':password', $pwd_reset);
-      $u->bindValue(':id', $user_id);
+      /* $u->bindValue(':email', $email_reset);
+      $u->bindValue(':token', $token);
+      $u->bindValue(':scadenza', $expDate); */
       $u->execute();
       
       $num_row=$u->rowCount($u);
@@ -52,17 +65,15 @@ if(isset($_POST["email"])){
       exit();
     }
     
-    var_dump($num_row);
-
     //se non ci sono errori proseguo
     if ($num_row>0) {
       //invio email con password temporanea chiedendo di cambiarla
       include("../mailer/send_pwd.php");
       //email inviata, ritorno avvisando che email stata inviata
-      // messaggio inviato con successo ha $_SESSION['err']==2
+      //messaggio inviato con successo ha $_SESSION['err']==2
       $err=2;
       $_SESSION['err']=$err;
-      header('location:forgotpwd.php?pn='.$pwd_new);
+      header('location:forgotpwd.php');
 
     } else { //torno indietro avvisando dell'errore
       $err=1;

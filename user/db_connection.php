@@ -12,5 +12,8 @@ catch (PDOException $e)
     echo $output;
     exit();
 }
+date_default_timezone_set('Europe/Rome'); //imposto fuso orario giusto
+
 $output = 'Connessione al database stabilita.';
+
 ?>

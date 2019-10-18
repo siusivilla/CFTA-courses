@@ -1,6 +1,6 @@
 <?php
   include_once('inc/config.php');
-  $pageTitle = "Località";
+  $pageTitle = "Killer Dettaglio";
   include_once('inc/header.php');
   include_once('inc/menu.php');
 ?>
@@ -34,7 +34,8 @@ else {
 <?php 
 if ($result->num_rows>0) {
 //finchè ci sono eventi
-$row=$result->fetch_assoc()
+$row=$result->fetch_assoc();
+$price = $row['prezzo'];
 ?>
 <div class="container">
   <div class="row">
@@ -54,15 +55,10 @@ $row=$result->fetch_assoc()
     <!-- acquisto -->
     <div class="col-sm-4">
       <div class="p-3 shadow ml-lg-4 rounded">
-        <p class="text-muted"><span class="text-success h2">$<?php echo $row['prezzo'];?></span> unica soluzione</p>
+        <p class="text-muted"><span class="text-success h2">&euro;<?php echo number_format($row['prezzo'], 0,",",".");?></span> unica soluzione</p>
         <hr class="my-4">
-        <form action="acquisto.php" method="post">
-          <input type="hidden" class="form-control" name="idKiller" id="idKiller" value="<?php echo $row['id'];?>">
-          <input type="hidden" class="form-control" name="idClient" id="idClient" value="<?php echo $_SESSION['id'];?>">
-          <input type="hidden" class="form-control" name="prezzo" id="prezzo" value="<?php echo $row['prezzo'];?>">
-          <button type="submit" class="btn btn-success btn-block">Prenota</button>
-        </form>
-        <p class="text-muted text-sm text-center mt-2">Per urgenze contattateci.</p>
+        <div id="paypal-button-container"></div>
+        <p class="text-sm text-center mt-2">Per urgenze <a href="contact.php" style="text-decoration: underline">contattateci</a>.</p>
         <hr class="my-4">
         <div class="text-center">
           <p> <a href="#" class="text-secondary text-sm"> <i class="fa fa-heart"></i> Salva tra i preferiti</a></p>
@@ -83,7 +79,52 @@ $row=$result->fetch_assoc()
 <?php } ?>
 </main>
 <!-- end main -->
+<!-- Include the PayPal JavaScript SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=ATsV08s4wngDu55BEZYFDAv2fUNVWk5h3pag0f0xhgnnjOLTPU2gRgyhVjciVkg_AaVhRptmN_X1jSvN&currency=EUR"></script>
 
+<script>
+    var price = "<?php echo $row['prezzo']; ?>";
+    document.write(price);
+    // Render the PayPal button into #paypal-button-container
+    paypal.Buttons({
+      // impostazioni di stile
+      style: {
+                color:  'gold',
+                shape:  'rect',
+                label:  'pay',
+                size: 'responsive',
+                layout: 'horizontal'
+            },
+        // Set up the transaction
+        commit: true, // Optional: show a 'Pay Now' button in the checkout flow
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: price
+                    }
+                }]
+            });
+        },
+        // Finalize the transaction
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                // Show a success message to the buyer
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                // Call your server to save the transaction
+                return fetch('/paypal-transaction-complete', {
+                  method: 'post',
+                  headers: {
+                    'content-type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                    orderID: data.orderID
+                  })
+                });
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
 <?php
 include_once('inc/footer.php');
 include_once('script/aos.php'); 

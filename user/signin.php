@@ -17,7 +17,18 @@
                 <p>Accedi per gestire il tuo account.</p>
               </header>
               <!-- End Title -->
-    
+              <!-- Message area -->
+              <?php
+              //c'è stato un errore
+              if (isset($_SESSION['err']) && ($_SESSION['err']==2) && ($_GET['e']='newpwd')){
+                // messaggio inviato con successo
+                  echo '<div class="alert alert-success" role="alert">
+                  La password &eacute stata aggiornata, accedi con la tua nuova password.
+                  </div>';
+                  unset ($_SESSION["err"]);
+              }
+              ?>
+              <!-- Message end -->
               <!-- Input -->
               <div class="js-form-message mb-4">
                 <div class="js-focus-state input-group form">

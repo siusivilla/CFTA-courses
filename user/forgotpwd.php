@@ -23,7 +23,7 @@
               <?php
               //c'è stato un errore
               if (isset($_SESSION['err'])){
-                if ($_SESSION['err']==1) {
+                if (($_SESSION['err']==1) && isset($_GET['e'])) {
                   switch ($_GET['e']) {
                     //non esiste utente
                     case 'nonesiste':
@@ -34,6 +34,9 @@
                       break;
                     case 'errinvio':
                       $message = "Problema nell'invio della password temporanea, riprovare più tardi";
+                      break;
+                    case 'errreset':
+                      $message = "Il link non è valido oppure e scaduto.";
                       break;
                     //errore generale nella rigenerazione della password
                     default:
@@ -47,7 +50,7 @@
                 // messaggio inviato con successo
                 if ($_SESSION['err']==2) {
                   echo '<div class="alert alert-success" role="alert">
-                  Password provvisoria inviata all\'email di registrazione, aggiornare al primo ingresso!
+                  &Eacute stata inviata un email per il recuro della password, seguire le istruzioni.
                   </div>';
                 }
               }

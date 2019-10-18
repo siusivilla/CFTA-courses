@@ -26,9 +26,10 @@ function logOut(){
 }
 
 //Print_r ($_SESSION);
-function password_generate($chars) 
+function token_generate($chars) 
 {
-  $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!?~@#-_+<>[]{}';
+  //$data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!?~@#-_+<>[]{}';
+  $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
   /* substr ( string $string , int $start [, int $length ] ) : string
   substr Returns the portion of string specified by the start and length parameters.
   str_shuffle ( string $str ) : string

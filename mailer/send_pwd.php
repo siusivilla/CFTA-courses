@@ -14,7 +14,7 @@ require '../vendor/autoload.php';
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-$mail_utente = $_POST['email'];
+$mail_utente = $email_reset;//$_POST['email'];
 
 try {
 //Server settings
@@ -34,7 +34,9 @@ try {
   // Content
   $mail->isHTML(true);                                  // Set email format to HTML
   $mail->Subject = 'Ripristino Password KillerPro';
-  $mail->Body    = "Recupero password per l'account ".$mail_utente."<br>Nuova password provvisoria: ".$pwd_new."<br> Per sicurezza cambiarla al primo accesso";
+  $mail->Body    = "Recupero password per l'account ".$mail_utente."<br>
+  Per poter resettare la password <a href='http://localhost:8888/KillerPro/user/new_pwd.php?tk=".$token."&email=".$mail_utente."&action=reset'>clicca qui!</a>
+   entro il ".$expDate;
 
   $mail->send();
 
